@@ -12,7 +12,7 @@ after_build:
 artifacts:
 - path: '**\*.nupkg'
 deploy:
-  release: NuGetPackageExplorer-v$(true)
+  release: NuGetPackageExplorer-v$(appveyor_repo_tag)
   description: 'NuGetPackageExplorer Release'
   provider: GitHub
   auth_token:
