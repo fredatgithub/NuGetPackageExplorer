@@ -16,7 +16,7 @@ deploy:
   description: 'NuGetPackageExplorer Release'
   provider: GitHub
   auth_token:
-    secure: <your encrypted token> # your encrypted token from GitHub
+    secure: <39c2f294ac9bdc28adc46923639443548cfc4d32> # your encrypted token from GitHub
   artifact: /.*\.nupkg/            # upload all NuGet packages to release assets
   draft: false
   prerelease: false
