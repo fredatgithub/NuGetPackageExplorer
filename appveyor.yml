@@ -3,7 +3,7 @@ configuration: Release
 platform: Any CPU
 build:
   project: NuGetPackageExplorer.sln
-  verbosity: maximal
+  verbosity: verbose
 after_build:
 - ps: >-
     choco pack PackageExplorer\NugetPackageExplorer.nuspec --version 3.18
