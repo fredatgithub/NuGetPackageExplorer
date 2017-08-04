@@ -11,4 +11,15 @@ after_build:
     Get-ChildItem .\*.nupkg | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
 artifacts:
 - path: '**\*.nupkg'
-deploy: off
+deploy:
+  release: NuGetPackageExplorer-v$(appveyor_build_version)
+  description: 'NuGetPackageExplorer Release'
+  provider: GitHub
+  auth_token:
+    secure: <your encrypted token> # your encrypted token from GitHub
+  artifact: /.*\.nupkg/            # upload all NuGet packages to release assets
+  draft: false
+  prerelease: false
+  on:
+    branch: master                 # release from master branch only
+    appveyor_repo_tag: true        # deploy on tag push only
