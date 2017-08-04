@@ -1,9 +1,9 @@
 version: 3.18.0.{build}
 configuration: Release
-#platform: Any CPU
-platform:
-  - x86
-  - x64
+platform: Any CPU
+#platform:
+#  - x86
+#  - x64
 build:
   project: NuGetPackageExplorer.sln
   verbosity: minimal
